@@ -31,6 +31,8 @@ struct RootView: View {
         }
         // デザインに暗色パレットが無いため、ライト固定で表示する。
         .preferredColorScheme(.light)
+        // layoutDirection は端末の言語設定に従うため、アプリ内の言語切り替えに合わせて上書きする。
+        .environment(\.layoutDirection, loc.language.isRightToLeft ? .rightToLeft : .leftToRight)
         .task {
 #if DEBUG
             if SampleData.isRequested { SampleData.seed(into: context) }

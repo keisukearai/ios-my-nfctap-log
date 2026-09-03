@@ -54,7 +54,7 @@ struct LocalizerTests {
         #expect(ThresholdOption.allCases.map { en.t($0.key) } == ["Off", "12 hours", "1 day", "3 days", "1 week"])
     }
 
-    @Test("画面で使うキーが両言語とも欠けていない")
+    @Test("画面で使うキーが全言語で欠けていない")
     func noMissingTranslations() {
         let keys = [
             "home.title", "home.scan", "home.sortNote", "home.emptyTitle", "home.emptyBody",
@@ -116,11 +116,40 @@ struct AppLanguageTests {
     func fixedLocales() {
         #expect(AppLanguage.ja.locale.identifier == "ja_JP")
         #expect(AppLanguage.en.locale.identifier == "en_US")
+        #expect(AppLanguage.zhHans.locale.identifier == "zh_CN")
+        #expect(AppLanguage.es.locale.identifier == "es_ES")
+        #expect(AppLanguage.hi.locale.identifier == "hi_IN")
+    }
+
+    @Test("アラビア語はグレゴリオ暦・算用数字に固定する")
+    func arabicUsesGregorianAndLatinDigits() {
+        let locale = AppLanguage.ar.locale
+        #expect(locale.calendar.identifier == .gregorian)
+        #expect(String(format: "%lld", locale: locale, 123) == "123")
+    }
+
+    @Test("右から左に組むのはアラビア語だけ")
+    func rightToLeftLanguages() {
+        #expect(AppLanguage.allCases.filter(\.isRightToLeft) == [.ar])
+    }
+
+    @Test("「M月d日」形式を使うのは日本語と簡体中文")
+    func cjkDateFormatLanguages() {
+        #expect(AppLanguage.allCases.filter(\.usesCJKDateFormat) == [.ja, .zhHans])
     }
 
     @Test("表示名はメニューの見た目どおり")
     func displayNames() {
-        #expect(AppLanguage.ja.displayName == "日本語")
-        #expect(AppLanguage.en.displayName == "English")
+        #expect(AppLanguage.allCases.map(\.displayName)
+            == ["日本語", "English", "简体中文", "Español", "हिन्दी", "العربية"])
+    }
+
+    @Test("rawValue が lproj のディレクトリ名と一致する")
+    func rawValuesMatchLprojNames() {
+        #expect(AppLanguage.allCases.map(\.rawValue) == ["ja", "en", "zh-Hans", "es", "hi", "ar"])
+        for language in AppLanguage.allCases {
+            #expect(Bundle.main.path(forResource: language.rawValue, ofType: "lproj") != nil,
+                    "\(language.rawValue).lproj がビルドされていない")
+        }
     }
 }

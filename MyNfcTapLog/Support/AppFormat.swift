@@ -19,11 +19,11 @@ struct AppFormat {
     }
 
     private var dateTimePattern: String {
-        loc.language == .ja ? "M月d日 H:mm" : "MMM d, H:mm"
+        loc.language.usesCJKDateFormat ? "M月d日 H:mm" : "MMM d, H:mm"
     }
 
     private var datePattern: String {
-        loc.language == .ja ? "M月d日" : "MMM d"
+        loc.language.usesCJKDateFormat ? "M月d日" : "MMM d"
     }
 
     func dateTime(_ date: Date) -> String { formatter(dateTimePattern).string(from: date) }

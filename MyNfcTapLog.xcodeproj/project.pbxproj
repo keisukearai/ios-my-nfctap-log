@@ -139,6 +139,10 @@
 			knownRegions = (
 				en,
 				ja,
+				"zh-Hans",
+				es,
+				hi,
+				ar,
 				Base,
 			);
 			mainGroup = C67D579E304A26D0004CF4A4;

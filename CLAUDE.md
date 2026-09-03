@@ -14,7 +14,7 @@ NFC タグにかざして行動を記録する iPhone アプリ。
 ## ビルド・実行
 
 ```bash
-# テスト（53件）
+# テスト（57件）
 xcodebuild test -project MyNfcTapLog.xcodeproj -scheme MyNfcTapLog \
   -destination 'platform=iOS Simulator,name=iPhone 17 Pro'
 
@@ -52,7 +52,12 @@ xcrun simctl launch booted com.keisukearai.MyNfcTapLog -seedSampleData -appLangu
 
 ## 多言語対応
 
-- `MyNfcTapLog/Localizable.xcstrings`（String Catalog）に ja / en を持つ。**言語を足すときは `AppLanguage` に case を足して xcstrings に訳を追加するだけ**
+- `MyNfcTapLog/Localizable.xcstrings`（String Catalog）に ja / en / zh-Hans / es / hi / ar の6言語を持つ
+- **言語を足すときの手順**：`AppLanguage` に case を足す → xcstrings に訳を追加 → **pbxproj の `knownRegions` にも言語コードを足す**（これが無いと `.lproj` がビルドされず、文言がキーのまま出る）
+- `AppLanguage.rawValue` が `.lproj` のディレクトリ名になる（簡体中文は `zh-Hans`）。`LocalizerTests.rawValuesMatchLprojNames` が実際に `.lproj` の存在を確かめている
+- アラビア語は RTL。`layoutDirection` は端末の言語設定を見るため、`RootView` で `AppLanguage.isRightToLeft` を `.environment(\.layoutDirection, ...)` に流し込んで切り替えている
+- アラビア語のロケールは `ar_SA@calendar=gregorian;numbers=latn`。素の `ar_SA` はヒジュラ暦・アラビア数字（٥٤٣）になり、等幅数字前提の表示と噛み合わないため明示的に固定している
+- 日付パターンは `AppLanguage.usesCJKDateFormat`（ja / zh-Hans）で `M月d日` 形式に分岐する
 - アプリ内での即時切り替えのため、`Localizer` が選択言語の `.lproj` Bundle を直接引いている（`Text(LocalizedStringKey)` は端末設定を見るため使えない）
 - 文言は `loc.t("key")` で取得する。`Text("...")` に日本語を直書きしない
 

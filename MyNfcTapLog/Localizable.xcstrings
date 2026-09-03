@@ -4,16 +4,40 @@
     "home.title": {
       "extractionState": "manual",
       "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "سجل اللمسات"
+          }
+        },
         "en": {
           "stringUnit": {
             "state": "translated",
             "value": "Tap Log"
           }
         },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Registro de toques"
+          }
+        },
+        "hi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "टैप लॉग"
+          }
+        },
         "ja": {
           "stringUnit": {
             "state": "translated",
             "value": "タップ記録"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "打卡记录"
           }
         }
       }
@@ -21,10 +45,28 @@
     "settings.title": {
       "extractionState": "manual",
       "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "الإعدادات"
+          }
+        },
         "en": {
           "stringUnit": {
             "state": "translated",
             "value": "Settings"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Ajustes"
+          }
+        },
+        "hi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "सेटिंग्स"
           }
         },
         "ja": {
@@ -32,16 +74,40 @@
             "state": "translated",
             "value": "設定"
           }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "设置"
+          }
         }
       }
     },
     "home.scan": {
       "extractionState": "manual",
       "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "مسح البطاقة"
+          }
+        },
         "en": {
           "stringUnit": {
             "state": "translated",
             "value": "Scan tag"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Escanear etiqueta"
+          }
+        },
+        "hi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "टैग स्कैन करें"
           }
         },
         "ja": {
@@ -49,16 +115,40 @@
             "state": "translated",
             "value": "タグスキャン"
           }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "扫描标签"
+          }
         }
       }
     },
     "home.sortNote": {
       "extractionState": "manual",
       "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "الأقدم لمسًا أولًا"
+          }
+        },
         "en": {
           "stringUnit": {
             "state": "translated",
             "value": "Oldest tap first"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Toque más antiguo primero"
+          }
+        },
+        "hi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "सबसे पुराने टैप पहले"
           }
         },
         "ja": {
@@ -66,16 +156,40 @@
             "state": "translated",
             "value": "最後のタップが古い順"
           }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "按最后打卡时间从旧到新"
+          }
         }
       }
     },
     "home.registered": {
       "extractionState": "manual",
       "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%lld بطاقة"
+          }
+        },
         "en": {
           "stringUnit": {
             "state": "translated",
             "value": "%lld tags"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%lld etiquetas"
+          }
+        },
+        "hi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%lld टैग"
           }
         },
         "ja": {
@@ -83,16 +197,40 @@
             "state": "translated",
             "value": "登録 %lld件"
           }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%lld 个标签"
+          }
         }
       }
     },
     "nav.backHome": {
       "extractionState": "manual",
       "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "سجل اللمسات"
+          }
+        },
         "en": {
           "stringUnit": {
             "state": "translated",
             "value": "Tap Log"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Registro de toques"
+          }
+        },
+        "hi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "टैप लॉग"
           }
         },
         "ja": {
@@ -100,16 +238,40 @@
             "state": "translated",
             "value": "タップ記録"
           }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "打卡记录"
+          }
         }
       }
     },
     "detail.elapsed": {
       "extractionState": "manual",
       "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "المدة المنقضية"
+          }
+        },
         "en": {
           "stringUnit": {
             "state": "translated",
             "value": "Elapsed"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Transcurrido"
+          }
+        },
+        "hi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "बीता समय"
           }
         },
         "ja": {
@@ -117,16 +279,40 @@
             "state": "translated",
             "value": "経過"
           }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "经过时间"
+          }
         }
       }
     },
     "detail.entries": {
       "extractionState": "manual",
       "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "عدد السجلات"
+          }
+        },
         "en": {
           "stringUnit": {
             "state": "translated",
             "value": "Entries"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Registros"
+          }
+        },
+        "hi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "प्रविष्टियाँ"
           }
         },
         "ja": {
@@ -134,16 +320,40 @@
             "state": "translated",
             "value": "記録数"
           }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "记录数"
+          }
         }
       }
     },
     "detail.history": {
       "extractionState": "manual",
       "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "السجل"
+          }
+        },
         "en": {
           "stringUnit": {
             "state": "translated",
             "value": "History"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Historial"
+          }
+        },
+        "hi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "इतिहास"
           }
         },
         "ja": {
@@ -151,16 +361,40 @@
             "state": "translated",
             "value": "履歴"
           }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "历史记录"
+          }
         }
       }
     },
     "detail.newestFirst": {
       "extractionState": "manual",
       "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "الأحدث أولًا"
+          }
+        },
         "en": {
           "stringUnit": {
             "state": "translated",
             "value": "Newest first"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Más recientes primero"
+          }
+        },
+        "hi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "नए पहले"
           }
         },
         "ja": {
@@ -168,16 +402,40 @@
             "state": "translated",
             "value": "新しい順"
           }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "从新到旧"
+          }
         }
       }
     },
     "common.delete": {
       "extractionState": "manual",
       "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "حذف"
+          }
+        },
         "en": {
           "stringUnit": {
             "state": "translated",
             "value": "Delete"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Eliminar"
+          }
+        },
+        "hi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "हटाएँ"
           }
         },
         "ja": {
@@ -185,16 +443,40 @@
             "state": "translated",
             "value": "削除"
           }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "删除"
+          }
         }
       }
     },
     "common.cancel": {
       "extractionState": "manual",
       "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "إلغاء"
+          }
+        },
         "en": {
           "stringUnit": {
             "state": "translated",
             "value": "Cancel"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Cancelar"
+          }
+        },
+        "hi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "रद्द करें"
           }
         },
         "ja": {
@@ -202,19 +484,49 @@
             "state": "translated",
             "value": "キャンセル"
           }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "取消"
+          }
         }
       }
     },
     "common.save": {
       "extractionState": "manual",
       "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "حفظ"
+          }
+        },
         "en": {
           "stringUnit": {
             "state": "translated",
             "value": "Save"
           }
         },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Guardar"
+          }
+        },
+        "hi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "सहेजें"
+          }
+        },
         "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "保存"
+          }
+        },
+        "zh-Hans": {
           "stringUnit": {
             "state": "translated",
             "value": "保存"
@@ -225,16 +537,40 @@
     "tag.rename": {
       "extractionState": "manual",
       "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "إعادة التسمية"
+          }
+        },
         "en": {
           "stringUnit": {
             "state": "translated",
             "value": "Rename"
           }
         },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Cambiar nombre"
+          }
+        },
+        "hi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "नाम बदलें"
+          }
+        },
         "ja": {
           "stringUnit": {
             "state": "translated",
             "value": "名前を変更"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "重命名"
           }
         }
       }
@@ -242,10 +578,28 @@
     "tag.deleteTag": {
       "extractionState": "manual",
       "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "حذف هذه البطاقة"
+          }
+        },
         "en": {
           "stringUnit": {
             "state": "translated",
             "value": "Delete this tag"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Eliminar esta etiqueta"
+          }
+        },
+        "hi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "यह टैग हटाएँ"
           }
         },
         "ja": {
@@ -253,16 +607,40 @@
             "state": "translated",
             "value": "このタグを削除"
           }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "删除此标签"
+          }
         }
       }
     },
     "page.prev": {
       "extractionState": "manual",
       "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "السابق"
+          }
+        },
         "en": {
           "stringUnit": {
             "state": "translated",
             "value": "Prev"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Ant."
+          }
+        },
+        "hi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "पिछला"
           }
         },
         "ja": {
@@ -270,16 +648,40 @@
             "state": "translated",
             "value": "前へ"
           }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "上一页"
+          }
         }
       }
     },
     "page.next": {
       "extractionState": "manual",
       "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "التالي"
+          }
+        },
         "en": {
           "stringUnit": {
             "state": "translated",
             "value": "Next"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Sig."
+          }
+        },
+        "hi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "अगला"
           }
         },
         "ja": {
@@ -287,16 +689,40 @@
             "state": "translated",
             "value": "次へ"
           }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "下一页"
+          }
         }
       }
     },
     "page.label": {
       "extractionState": "manual",
       "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "صفحة %1$lld من %2$lld"
+          }
+        },
         "en": {
           "stringUnit": {
             "state": "translated",
             "value": "Page %1$lld of %2$lld"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Página %1$lld de %2$lld"
+          }
+        },
+        "hi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "पेज %1$lld / %2$lld"
           }
         },
         "ja": {
@@ -304,16 +730,40 @@
             "state": "translated",
             "value": "%1$lld / %2$lldページ"
           }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "第 %1$lld / %2$lld 页"
+          }
         }
       }
     },
     "page.range": {
       "extractionState": "manual",
       "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%1$lld–%2$lld من %3$lld"
+          }
+        },
         "en": {
           "stringUnit": {
             "state": "translated",
             "value": "%1$lld–%2$lld of %3$lld"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%1$lld–%2$lld de %3$lld"
+          }
+        },
+        "hi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%1$lld–%2$lld / %3$lld"
           }
         },
         "ja": {
@@ -321,16 +771,40 @@
             "state": "translated",
             "value": "%1$lld–%2$lld件 / %3$lld件"
           }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "第 %1$lld–%2$lld 条 / 共 %3$lld 条"
+          }
         }
       }
     },
     "tag.threshold": {
       "extractionState": "manual",
       "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "التنبيه بعد"
+          }
+        },
         "en": {
           "stringUnit": {
             "state": "translated",
             "value": "Overdue after"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Avisar tras"
+          }
+        },
+        "hi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "चेतावनी का समय"
           }
         },
         "ja": {
@@ -338,16 +812,40 @@
             "state": "translated",
             "value": "経過の警告"
           }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "超时提醒"
+          }
         }
       }
     },
     "settings.thresholdNote": {
       "extractionState": "manual",
       "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "بعد مرور هذه المدة، يتحول الوقت المنقضي إلى اللون الأحمر في الشاشة الرئيسية."
+          }
+        },
         "en": {
           "stringUnit": {
             "state": "translated",
             "value": "Once this much time passes, the elapsed time turns red on the home list."
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Cuando pase ese tiempo, el tiempo transcurrido se pondrá en rojo en la pantalla de inicio."
+          }
+        },
+        "hi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "तय समय बीत जाने पर होम सूची में बीता समय लाल हो जाता है।"
           }
         },
         "ja": {
@@ -355,16 +853,40 @@
             "state": "translated",
             "value": "設定した時間を過ぎると、ホームの経過時間が赤くなります。"
           }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "超过设定的时间后，主页上的经过时间会变成红色。"
+          }
         }
       }
     },
     "tag.deleteNote": {
       "extractionState": "manual",
       "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "سيتم حذف هذه البطاقة وكل سجلها. إعادة تسجيل البطاقة نفسها لا تستعيد السجل."
+          }
+        },
         "en": {
           "stringUnit": {
             "state": "translated",
             "value": "This tag and all of its history will be deleted. Re-registering the same tag does not restore it."
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Se eliminarán esta etiqueta y todo su historial. Volver a registrar la misma etiqueta no lo recupera."
+          }
+        },
+        "hi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "यह टैग और इसका पूरा इतिहास हट जाएगा। वही टैग दोबारा जोड़ने पर भी इतिहास वापस नहीं आता।"
           }
         },
         "ja": {
@@ -372,16 +894,40 @@
             "state": "translated",
             "value": "このタグと履歴がすべて削除されます。同じタグを再登録しても履歴は戻りません。"
           }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "此标签及其全部历史记录都会被删除。重新登记同一标签也无法恢复历史记录。"
+          }
         }
       }
     },
     "delete.confirmTitle": {
       "extractionState": "manual",
       "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "حذف «%@»؟"
+          }
+        },
         "en": {
           "stringUnit": {
             "state": "translated",
             "value": "Delete “%@”?"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "¿Eliminar «%@»?"
+          }
+        },
+        "hi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "“%@” को हटाएँ?"
           }
         },
         "ja": {
@@ -389,16 +935,40 @@
             "state": "translated",
             "value": "「%@」を削除しますか？"
           }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "要删除“%@”吗？"
+          }
         }
       }
     },
     "settings.unnamedNote": {
       "extractionState": "manual",
       "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "الاسم اختياري. تظهر البطاقات بلا اسم باسم «بطاقة جديدة»."
+          }
+        },
         "en": {
           "stringUnit": {
             "state": "translated",
             "value": "Names are optional. Unnamed tags appear as “New tag”."
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "El nombre es opcional. Las etiquetas sin nombre aparecen como «Etiqueta nueva»."
+          }
+        },
+        "hi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "नाम देना ज़रूरी नहीं है। बिना नाम वाले टैग “नया टैग” के रूप में दिखते हैं।"
           }
         },
         "ja": {
@@ -406,16 +976,40 @@
             "state": "translated",
             "value": "名前は任意です。付けていないタグは「新規タグ」として並びます。"
           }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "名称是可选的。未命名的标签会显示为“新标签”。"
+          }
         }
       }
     },
     "settings.registeredTags": {
       "extractionState": "manual",
       "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "البطاقات المسجّلة"
+          }
+        },
         "en": {
           "stringUnit": {
             "state": "translated",
             "value": "Registered tags"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Etiquetas registradas"
+          }
+        },
+        "hi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "जोड़े गए टैग"
           }
         },
         "ja": {
@@ -423,16 +1017,40 @@
             "state": "translated",
             "value": "登録済みのタグ"
           }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "已登记的标签"
+          }
         }
       }
     },
     "settings.registeredNote": {
       "extractionState": "manual",
       "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "اضغط على بطاقة لضبط تنبيهها أو إعادة تسميتها أو حذفها."
+          }
+        },
         "en": {
           "stringUnit": {
             "state": "translated",
             "value": "Tap a tag to set its overdue warning, rename it, or delete it."
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Toca una etiqueta para configurar su aviso, cambiarle el nombre o eliminarla."
+          }
+        },
+        "hi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "चेतावनी का समय तय करने, नाम बदलने या हटाने के लिए टैग पर टैप करें।"
           }
         },
         "ja": {
@@ -440,16 +1058,40 @@
             "state": "translated",
             "value": "タグをタップすると、経過の警告・名前の変更・削除ができます。"
           }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "点按标签即可设置超时提醒、重命名或删除。"
+          }
         }
       }
     },
     "detail.footer": {
       "extractionState": "manual",
       "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "يتم ضبط التنبيه وإعادة التسمية والحذف من الإعدادات."
+          }
+        },
         "en": {
           "stringUnit": {
             "state": "translated",
             "value": "Overdue warning, rename and delete are handled in Settings."
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "El aviso, el cambio de nombre y la eliminación se hacen en Ajustes."
+          }
+        },
+        "hi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "चेतावनी का समय, नाम बदलना और टैग हटाना सेटिंग्स में किया जाता है।"
           }
         },
         "ja": {
@@ -457,16 +1099,40 @@
             "state": "translated",
             "value": "経過の警告、名前の変更、タグの削除は設定画面で行います。"
           }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "超时提醒、重命名和删除请在设置中操作。"
+          }
         }
       }
     },
     "settings.addTag": {
       "extractionState": "manual",
       "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "إضافة بطاقة"
+          }
+        },
         "en": {
           "stringUnit": {
             "state": "translated",
             "value": "Add a tag"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Añadir una etiqueta"
+          }
+        },
+        "hi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "टैग जोड़ें"
           }
         },
         "ja": {
@@ -474,16 +1140,40 @@
             "state": "translated",
             "value": "タグの追加"
           }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "添加标签"
+          }
         }
       }
     },
     "settings.scanToRegister": {
       "extractionState": "manual",
       "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "امسح بطاقة لتسجيلها"
+          }
+        },
         "en": {
           "stringUnit": {
             "state": "translated",
             "value": "Scan a tag to register"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Escanear una etiqueta para registrarla"
+          }
+        },
+        "hi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "जोड़ने के लिए टैग स्कैन करें"
           }
         },
         "ja": {
@@ -491,16 +1181,40 @@
             "state": "translated",
             "value": "タグをスキャンして登録"
           }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "扫描标签并登记"
+          }
         }
       }
     },
     "settings.addNote": {
       "extractionState": "manual",
       "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "تظهر البطاقات المسجّلة فقط في الشاشة الرئيسية. يمكنك إعادة تسميتها لاحقًا."
+          }
+        },
         "en": {
           "stringUnit": {
             "state": "translated",
             "value": "Only registered tags appear on the home list. You can rename them later."
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Solo las etiquetas registradas aparecen en la pantalla de inicio. Puedes cambiarles el nombre después."
+          }
+        },
+        "hi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "होम सूची में सिर्फ़ जोड़े गए टैग दिखते हैं। नाम बाद में बदला जा सकता है।"
           }
         },
         "ja": {
@@ -508,16 +1222,40 @@
             "state": "translated",
             "value": "登録したタグだけがホームに並びます。名前は後から変更できます。"
           }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "只有已登记的标签才会出现在主页。名称可以稍后修改。"
+          }
         }
       }
     },
     "rename.title": {
       "extractionState": "manual",
       "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "إعادة التسمية"
+          }
+        },
         "en": {
           "stringUnit": {
             "state": "translated",
             "value": "Rename"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Cambiar nombre"
+          }
+        },
+        "hi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "नाम बदलें"
           }
         },
         "ja": {
@@ -525,16 +1263,40 @@
             "state": "translated",
             "value": "名前を変更"
           }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "重命名"
+          }
         }
       }
     },
     "rename.body": {
       "extractionState": "manual",
       "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "أدخل اسمًا لهذه البطاقة. اتركه فارغًا لتعود إلى «بطاقة جديدة»."
+          }
+        },
         "en": {
           "stringUnit": {
             "state": "translated",
             "value": "Enter a name for this tag. Leave it empty to go back to “New tag”."
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Escribe un nombre para esta etiqueta. Si lo dejas vacío, volverá a llamarse «Etiqueta nueva»."
+          }
+        },
+        "hi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "इस टैग का नाम डालें। खाली छोड़ने पर यह फिर से “नया टैग” हो जाएगा।"
           }
         },
         "ja": {
@@ -542,16 +1304,40 @@
             "state": "translated",
             "value": "このタグの名前を入力します。空のままにすると「新規タグ」に戻ります。"
           }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "请输入此标签的名称。留空则会恢复为“新标签”。"
+          }
         }
       }
     },
     "rename.placeholder": {
       "extractionState": "manual",
       "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "مثال: تناول الدواء"
+          }
+        },
         "en": {
           "stringUnit": {
             "state": "translated",
             "value": "e.g. Take medicine"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Ej.: Tomar la medicación"
+          }
+        },
+        "hi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "उदा. दवा लेना"
           }
         },
         "ja": {
@@ -559,16 +1345,40 @@
             "state": "translated",
             "value": "例：薬を飲む"
           }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "例：吃药"
+          }
         }
       }
     },
     "scan.ok.title": {
       "extractionState": "manual",
       "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "تم تدوين اللمسة"
+          }
+        },
         "en": {
           "stringUnit": {
             "state": "translated",
             "value": "Logged"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Toque registrado"
+          }
+        },
+        "hi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "दर्ज हो गया"
           }
         },
         "ja": {
@@ -576,19 +1386,49 @@
             "state": "translated",
             "value": "記録しました"
           }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "已记录"
+          }
         }
       }
     },
     "scan.ok.body": {
       "extractionState": "manual",
       "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%1$@ — %2$@"
+          }
+        },
         "en": {
           "stringUnit": {
             "state": "translated",
             "value": "%1$@ — %2$@"
           }
         },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%1$@ — %2$@"
+          }
+        },
+        "hi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%1$@ — %2$@"
+          }
+        },
         "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%1$@ — %2$@"
+          }
+        },
+        "zh-Hans": {
           "stringUnit": {
             "state": "translated",
             "value": "%1$@ — %2$@"
@@ -599,10 +1439,28 @@
     "scan.ok.note": {
       "extractionState": "manual",
       "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "بذلك يصبح العدد %lld سجلًا."
+          }
+        },
         "en": {
           "stringUnit": {
             "state": "translated",
             "value": "That makes %lld entries."
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Ya van %lld registros."
+          }
+        },
+        "hi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "अब कुल %lld प्रविष्टियाँ हैं।"
           }
         },
         "ja": {
@@ -610,16 +1468,40 @@
             "state": "translated",
             "value": "これで %lld 件目です。"
           }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "这是第 %lld 条记录。"
+          }
         }
       }
     },
     "scan.unknown.title": {
       "extractionState": "manual",
       "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "بطاقة غير مسجّلة"
+          }
+        },
         "en": {
           "stringUnit": {
             "state": "translated",
             "value": "Unregistered tag"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Etiqueta no registrada"
+          }
+        },
+        "hi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "यह टैग जोड़ा नहीं गया है"
           }
         },
         "ja": {
@@ -627,16 +1509,40 @@
             "state": "translated",
             "value": "未登録のタグです"
           }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "未登记的标签"
+          }
         }
       }
     },
     "scan.unknown.body": {
       "extractionState": "manual",
       "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "هذه البطاقة غير مسجّلة بعد. سجّلها لتبدأ التدوين."
+          }
+        },
         "en": {
           "stringUnit": {
             "state": "translated",
             "value": "This tag is not registered yet. Register it to start logging."
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Esta etiqueta aún no está registrada. Regístrala para empezar a anotar."
+          }
+        },
+        "hi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "यह टैग अभी तक जोड़ा नहीं गया है। रिकॉर्ड रखने के लिए इसे जोड़ें।"
           }
         },
         "ja": {
@@ -644,16 +1550,40 @@
             "state": "translated",
             "value": "このタグはまだ登録されていません。登録すると記録を残せます。"
           }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "此标签尚未登记。登记后即可开始记录。"
+          }
         }
       }
     },
     "scan.unknown.cta": {
       "extractionState": "manual",
       "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "تسجيل هذه البطاقة"
+          }
+        },
         "en": {
           "stringUnit": {
             "state": "translated",
             "value": "Register this tag"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Registrar esta etiqueta"
+          }
+        },
+        "hi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "यह टैग जोड़ें"
           }
         },
         "ja": {
@@ -661,16 +1591,40 @@
             "state": "translated",
             "value": "このタグを登録"
           }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "登记此标签"
+          }
         }
       }
     },
     "scan.fail.title": {
       "extractionState": "manual",
       "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "تعذّرت قراءة البطاقة"
+          }
+        },
         "en": {
           "stringUnit": {
             "state": "translated",
             "value": "Could not read the tag"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "No se pudo leer la etiqueta"
+          }
+        },
+        "hi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "टैग नहीं पढ़ा जा सका"
           }
         },
         "ja": {
@@ -678,16 +1632,40 @@
             "state": "translated",
             "value": "読み取れませんでした"
           }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "无法读取标签"
+          }
         }
       }
     },
     "scan.fail.body": {
       "extractionState": "manual",
       "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "قرّب الحافة العلوية من iPhone إلى البطاقة وأبقِه ثابتًا بضع ثوانٍ. البطاقات الموضوعة على المعدن تحتاج إلى نوع مضاد للمعادن."
+          }
+        },
         "en": {
           "stringUnit": {
             "state": "translated",
             "value": "Hold the top edge of your iPhone against the tag and keep still for a few seconds. Tags on metal need an anti-metal type."
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Acerca el borde superior del iPhone a la etiqueta y mantenlo quieto unos segundos. Las etiquetas sobre metal deben ser de tipo antimetal."
+          }
+        },
+        "hi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "iPhone के ऊपरी किनारे को टैग के पास ले जाएँ और कुछ सेकंड स्थिर रखें। धातु की सतह पर लगे टैग के लिए एंटी-मेटल टैग चाहिए।"
           }
         },
         "ja": {
@@ -695,16 +1673,40 @@
             "state": "translated",
             "value": "iPhone の上端をタグに近づけて、動かさずに数秒待ってください。金属面のタグはアンチメタル対応が必要です。"
           }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "请将 iPhone 顶端贴近标签，保持不动几秒钟。贴在金属面上的标签需要使用抗金属类型。"
+          }
         }
       }
     },
     "scan.fail.cta": {
       "extractionState": "manual",
       "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "مسح مرة أخرى"
+          }
+        },
         "en": {
           "stringUnit": {
             "state": "translated",
             "value": "Scan again"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Escanear de nuevo"
+          }
+        },
+        "hi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "फिर से स्कैन करें"
           }
         },
         "ja": {
@@ -712,16 +1714,40 @@
             "state": "translated",
             "value": "もう一度スキャン"
           }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "再次扫描"
+          }
         }
       }
     },
     "scan.close": {
       "extractionState": "manual",
       "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "إغلاق"
+          }
+        },
         "en": {
           "stringUnit": {
             "state": "translated",
             "value": "Close"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Cerrar"
+          }
+        },
+        "hi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "बंद करें"
           }
         },
         "ja": {
@@ -729,16 +1755,40 @@
             "state": "translated",
             "value": "閉じる"
           }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "关闭"
+          }
         }
       }
     },
     "scan.unavailable.title": {
       "extractionState": "manual",
       "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "NFC غير متاح"
+          }
+        },
         "en": {
           "stringUnit": {
             "state": "translated",
             "value": "NFC is unavailable"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "NFC no disponible"
+          }
+        },
+        "hi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "NFC उपलब्ध नहीं है"
           }
         },
         "ja": {
@@ -746,16 +1796,40 @@
             "state": "translated",
             "value": "NFC を利用できません"
           }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "无法使用 NFC"
+          }
         }
       }
     },
     "scan.unavailable.body": {
       "extractionState": "manual",
       "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "لا يستطيع هذا الجهاز قراءة بطاقات NFC."
+          }
+        },
         "en": {
           "stringUnit": {
             "state": "translated",
             "value": "This device cannot read NFC tags."
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Este dispositivo no puede leer etiquetas NFC."
+          }
+        },
+        "hi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "यह डिवाइस NFC टैग नहीं पढ़ सकता।"
           }
         },
         "ja": {
@@ -763,16 +1837,40 @@
             "state": "translated",
             "value": "この端末では NFC タグの読み取りができません。"
           }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "此设备无法读取 NFC 标签。"
+          }
         }
       }
     },
     "detail.noLogTitle": {
       "extractionState": "manual",
       "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "لا توجد سجلات بعد"
+          }
+        },
         "en": {
           "stringUnit": {
             "state": "translated",
             "value": "No entries yet"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Aún no hay registros"
+          }
+        },
+        "hi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "अभी कोई प्रविष्टि नहीं"
           }
         },
         "ja": {
@@ -780,16 +1878,40 @@
             "state": "translated",
             "value": "まだ記録がありません"
           }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "还没有记录"
+          }
         }
       }
     },
     "detail.noLogBody": {
       "extractionState": "manual",
       "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "امسح هذه البطاقة وستظهر التواريخ هنا."
+          }
+        },
         "en": {
           "stringUnit": {
             "state": "translated",
             "value": "Scan this tag and the timestamps will appear here."
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Escanea esta etiqueta y las fechas aparecerán aquí."
+          }
+        },
+        "hi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "इस टैग को स्कैन करने पर तारीख़ और समय यहाँ दिखेंगे।"
           }
         },
         "ja": {
@@ -797,16 +1919,40 @@
             "state": "translated",
             "value": "このタグをスキャンすると、ここに日時が並びます。"
           }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "扫描此标签后，时间会显示在这里。"
+          }
         }
       }
     },
     "home.emptyTitle": {
       "extractionState": "manual",
       "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "لا توجد بطاقات بعد"
+          }
+        },
         "en": {
           "stringUnit": {
             "state": "translated",
             "value": "No tags yet"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Aún no hay etiquetas"
+          }
+        },
+        "hi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "अभी कोई टैग नहीं"
           }
         },
         "ja": {
@@ -814,16 +1960,40 @@
             "state": "translated",
             "value": "まだタグがありません"
           }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "还没有标签"
+          }
         }
       }
     },
     "home.emptyBody": {
       "extractionState": "manual",
       "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "ألصق بطاقة في المكان الذي يحدث فيه النشاط، ثم امسحها لتسجيلها. ستظهر البطاقات المسجّلة هنا."
+          }
+        },
         "en": {
           "stringUnit": {
             "state": "translated",
             "value": "Stick a tag where the action happens, then scan it to register. Registered tags appear here."
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Pega una etiqueta donde ocurra la acción y escanéala para registrarla. Las etiquetas registradas aparecerán aquí."
+          }
+        },
+        "hi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "जहाँ वह काम होता है वहाँ टैग चिपकाएँ, फिर स्कैन करके जोड़ें। जोड़े गए टैग यहाँ दिखेंगे।"
           }
         },
         "ja": {
@@ -831,16 +2001,40 @@
             "state": "translated",
             "value": "記録したい行動の場所にタグを貼り、スキャンして登録します。登録したタグがここに並びます。"
           }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "把标签贴在要记录的行为发生的地方，然后扫描登记。已登记的标签会显示在这里。"
+          }
         }
       }
     },
     "home.emptyCta": {
       "extractionState": "manual",
       "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "امسح بطاقة لتسجيلها"
+          }
+        },
         "en": {
           "stringUnit": {
             "state": "translated",
             "value": "Scan a tag to register"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Escanear una etiqueta para registrarla"
+          }
+        },
+        "hi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "जोड़ने के लिए टैग स्कैन करें"
           }
         },
         "ja": {
@@ -848,16 +2042,40 @@
             "state": "translated",
             "value": "タグをスキャンして登録"
           }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "扫描标签并登记"
+          }
         }
       }
     },
     "home.emptyHint": {
       "extractionState": "manual",
       "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "البطاقات المدعومة: NTAG213 / NTAG215. استخدم بطاقات مضادة للمعادن على الأسطح المعدنية."
+          }
+        },
         "en": {
           "stringUnit": {
             "state": "translated",
             "value": "Supported tags: NTAG213 / NTAG215. Use anti-metal tags on metal surfaces."
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Etiquetas compatibles: NTAG213 / NTAG215. Usa etiquetas antimetal en superficies metálicas."
+          }
+        },
+        "hi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "समर्थित टैग: NTAG213 / NTAG215। धातु की सतह पर एंटी-मेटल टैग इस्तेमाल करें।"
           }
         },
         "ja": {
@@ -865,16 +2083,40 @@
             "state": "translated",
             "value": "対応タグは NTAG213／NTAG215。金属面にはアンチメタルタグを使ってください。"
           }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "支持的标签：NTAG213／NTAG215。金属面请使用抗金属标签。"
+          }
         }
       }
     },
     "settings.language": {
       "extractionState": "manual",
       "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "اللغة"
+          }
+        },
         "en": {
           "stringUnit": {
             "state": "translated",
             "value": "Language"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Idioma"
+          }
+        },
+        "hi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "भाषा"
           }
         },
         "ja": {
@@ -882,16 +2124,40 @@
             "state": "translated",
             "value": "言語"
           }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "语言"
+          }
         }
       }
     },
     "settings.about": {
       "extractionState": "manual",
       "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "حول التطبيق"
+          }
+        },
         "en": {
           "stringUnit": {
             "state": "translated",
             "value": "About"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Acerca de"
+          }
+        },
+        "hi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "ऐप के बारे में"
           }
         },
         "ja": {
@@ -899,16 +2165,40 @@
             "state": "translated",
             "value": "このアプリについて"
           }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "关于本应用"
+          }
         }
       }
     },
     "about.appName": {
       "extractionState": "manual",
       "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "اسم التطبيق"
+          }
+        },
         "en": {
           "stringUnit": {
             "state": "translated",
             "value": "App name"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Nombre de la app"
+          }
+        },
+        "hi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "ऐप का नाम"
           }
         },
         "ja": {
@@ -916,16 +2206,40 @@
             "state": "translated",
             "value": "アプリ名"
           }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "应用名称"
+          }
         }
       }
     },
     "about.supported": {
       "extractionState": "manual",
       "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "البطاقات المدعومة"
+          }
+        },
         "en": {
           "stringUnit": {
             "state": "translated",
             "value": "Supported tags"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Etiquetas compatibles"
+          }
+        },
+        "hi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "समर्थित टैग"
           }
         },
         "ja": {
@@ -933,16 +2247,40 @@
             "state": "translated",
             "value": "対応タグ"
           }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "支持的标签"
+          }
         }
       }
     },
     "about.readMethod": {
       "extractionState": "manual",
       "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "طريقة القراءة"
+          }
+        },
         "en": {
           "stringUnit": {
             "state": "translated",
             "value": "Read method"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Método de lectura"
+          }
+        },
+        "hi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "पढ़ने का तरीका"
           }
         },
         "ja": {
@@ -950,16 +2288,40 @@
             "state": "translated",
             "value": "読み取り方式"
           }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "读取方式"
+          }
         }
       }
     },
     "about.version": {
       "extractionState": "manual",
       "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "الإصدار"
+          }
+        },
         "en": {
           "stringUnit": {
             "state": "translated",
             "value": "Version"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Versión"
+          }
+        },
+        "hi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "वर्शन"
           }
         },
         "ja": {
@@ -967,16 +2329,40 @@
             "state": "translated",
             "value": "バージョン"
           }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "版本"
+          }
         }
       }
     },
     "settings.uidNote": {
       "extractionState": "manual",
       "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "لا يمكن التعرّف على البطاقات ذات المعرّف UID العشوائي. استخدم بطاقات مضادة للمعادن على الأسطح المعدنية."
+          }
+        },
         "en": {
           "stringUnit": {
             "state": "translated",
             "value": "Cards with randomized UIDs cannot be identified. Use anti-metal tags on metal surfaces."
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "No se pueden identificar las tarjetas con UID aleatorio. Usa etiquetas antimetal en superficies metálicas."
+          }
+        },
+        "hi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "बदलते (रैंडम) UID वाले कार्ड पहचाने नहीं जा सकते। धातु की सतह पर एंटी-मेटल टैग इस्तेमाल करें।"
           }
         },
         "ja": {
@@ -984,16 +2370,40 @@
             "state": "translated",
             "value": "UID をランダム化するカードは識別できません。金属面にはアンチメタルタグを使ってください。"
           }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "无法识别 UID 随机变化的卡片。金属面请使用抗金属标签。"
+          }
         }
       }
     },
     "tag.unnamed": {
       "extractionState": "manual",
       "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "بطاقة جديدة"
+          }
+        },
         "en": {
           "stringUnit": {
             "state": "translated",
             "value": "New tag"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Etiqueta nueva"
+          }
+        },
+        "hi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "नया टैग"
           }
         },
         "ja": {
@@ -1001,16 +2411,40 @@
             "state": "translated",
             "value": "新規タグ"
           }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "新标签"
+          }
         }
       }
     },
     "tag.noTaps": {
       "extractionState": "manual",
       "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "بلا لمسات"
+          }
+        },
         "en": {
           "stringUnit": {
             "state": "translated",
             "value": "No taps"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Sin toques"
+          }
+        },
+        "hi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "कोई टैप नहीं"
           }
         },
         "ja": {
@@ -1018,16 +2452,40 @@
             "state": "translated",
             "value": "未記録"
           }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "尚无记录"
+          }
         }
       }
     },
     "tag.registeredOnly": {
       "extractionState": "manual",
       "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "مسجّلة فقط"
+          }
+        },
         "en": {
           "stringUnit": {
             "state": "translated",
             "value": "Registered only"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Solo registrada"
+          }
+        },
+        "hi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "सिर्फ़ जोड़ा गया"
           }
         },
         "ja": {
@@ -1035,16 +2493,40 @@
             "state": "translated",
             "value": "登録のみ"
           }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "仅登记"
+          }
         }
       }
     },
     "threshold.off": {
       "extractionState": "manual",
       "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "بدون"
+          }
+        },
         "en": {
           "stringUnit": {
             "state": "translated",
             "value": "Off"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Sin aviso"
+          }
+        },
+        "hi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "बंद"
           }
         },
         "ja": {
@@ -1052,16 +2534,40 @@
             "state": "translated",
             "value": "なし"
           }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "不提醒"
+          }
         }
       }
     },
     "threshold.12h": {
       "extractionState": "manual",
       "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "12 ساعة"
+          }
+        },
         "en": {
           "stringUnit": {
             "state": "translated",
             "value": "12 hours"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "12 horas"
+          }
+        },
+        "hi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "12 घंटे"
           }
         },
         "ja": {
@@ -1069,16 +2575,40 @@
             "state": "translated",
             "value": "12時間"
           }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "12 小时"
+          }
         }
       }
     },
     "threshold.1d": {
       "extractionState": "manual",
       "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "يوم واحد"
+          }
+        },
         "en": {
           "stringUnit": {
             "state": "translated",
             "value": "1 day"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "1 día"
+          }
+        },
+        "hi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "1 दिन"
           }
         },
         "ja": {
@@ -1086,16 +2616,40 @@
             "state": "translated",
             "value": "1日"
           }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "1 天"
+          }
         }
       }
     },
     "threshold.3d": {
       "extractionState": "manual",
       "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "3 أيام"
+          }
+        },
         "en": {
           "stringUnit": {
             "state": "translated",
             "value": "3 days"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "3 días"
+          }
+        },
+        "hi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "3 दिन"
           }
         },
         "ja": {
@@ -1103,16 +2657,40 @@
             "state": "translated",
             "value": "3日"
           }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "3 天"
+          }
         }
       }
     },
     "threshold.1w": {
       "extractionState": "manual",
       "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "أسبوع واحد"
+          }
+        },
         "en": {
           "stringUnit": {
             "state": "translated",
             "value": "1 week"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "1 semana"
+          }
+        },
+        "hi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "1 सप्ताह"
           }
         },
         "ja": {
@@ -1120,16 +2698,40 @@
             "state": "translated",
             "value": "1週間"
           }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "1 周"
+          }
         }
       }
     },
     "elapsed.dayHour": {
       "extractionState": "manual",
       "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%1$lld يوم %2$lld ساعة"
+          }
+        },
         "en": {
           "stringUnit": {
             "state": "translated",
             "value": "%1$lldd %2$lldh"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%1$lld d %2$lld h"
+          }
+        },
+        "hi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%1$lld दिन %2$lld घं"
           }
         },
         "ja": {
@@ -1137,16 +2739,40 @@
             "state": "translated",
             "value": "%1$lld日 %2$lld時間"
           }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%1$lld天 %2$lld小时"
+          }
         }
       }
     },
     "elapsed.day": {
       "extractionState": "manual",
       "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%lld يوم"
+          }
+        },
         "en": {
           "stringUnit": {
             "state": "translated",
             "value": "%lldd"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%lld d"
+          }
+        },
+        "hi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%lld दिन"
           }
         },
         "ja": {
@@ -1154,16 +2780,40 @@
             "state": "translated",
             "value": "%lld日"
           }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%lld天"
+          }
         }
       }
     },
     "elapsed.hour": {
       "extractionState": "manual",
       "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%lld ساعة"
+          }
+        },
         "en": {
           "stringUnit": {
             "state": "translated",
             "value": "%lldh"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%lld h"
+          }
+        },
+        "hi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%lld घं"
           }
         },
         "ja": {
@@ -1171,16 +2821,40 @@
             "state": "translated",
             "value": "%lld時間"
           }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%lld小时"
+          }
         }
       }
     },
     "elapsed.minute": {
       "extractionState": "manual",
       "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%lld دقيقة"
+          }
+        },
         "en": {
           "stringUnit": {
             "state": "translated",
             "value": "%lldm"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%lld min"
+          }
+        },
+        "hi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%lld मि"
           }
         },
         "ja": {
@@ -1188,16 +2862,40 @@
             "state": "translated",
             "value": "%lld分"
           }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%lld分钟"
+          }
         }
       }
     },
     "elapsed.now": {
       "extractionState": "manual",
       "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "الآن"
+          }
+        },
         "en": {
           "stringUnit": {
             "state": "translated",
             "value": "Just now"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Ahora mismo"
+          }
+        },
+        "hi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "अभी-अभी"
           }
         },
         "ja": {
@@ -1205,16 +2903,40 @@
             "state": "translated",
             "value": "たった今"
           }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "刚刚"
+          }
         }
       }
     },
     "scan.registered.title": {
       "extractionState": "manual",
       "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "تم تسجيل البطاقة"
+          }
+        },
         "en": {
           "stringUnit": {
             "state": "translated",
             "value": "Registered"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Etiqueta registrada"
+          }
+        },
+        "hi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "जोड़ दिया गया"
           }
         },
         "ja": {
@@ -1222,16 +2944,40 @@
             "state": "translated",
             "value": "登録しました"
           }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "已登记"
+          }
         }
       }
     },
     "scan.registered.body": {
       "extractionState": "manual",
       "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "يمكنك تسميتها من الإعدادات."
+          }
+        },
         "en": {
           "stringUnit": {
             "state": "translated",
             "value": "You can name it in Settings."
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Puedes ponerle nombre en Ajustes."
+          }
+        },
+        "hi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "सेटिंग्स में इसे नाम दे सकते हैं।"
           }
         },
         "ja": {
@@ -1239,16 +2985,40 @@
             "state": "translated",
             "value": "設定から名前を付けられます。"
           }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "可以在设置中为它命名。"
+          }
         }
       }
     },
     "scan.already.title": {
       "extractionState": "manual",
       "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "مسجّلة بالفعل"
+          }
+        },
         "en": {
           "stringUnit": {
             "state": "translated",
             "value": "Already registered"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Ya está registrada"
+          }
+        },
+        "hi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "पहले से जोड़ा हुआ है"
           }
         },
         "ja": {
@@ -1256,22 +3026,52 @@
             "state": "translated",
             "value": "すでに登録済みです"
           }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "已经登记过了"
+          }
         }
       }
     },
     "scan.already.body": {
       "extractionState": "manual",
       "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "هذه البطاقة مسجّلة بالفعل. يمكنك إعادة تسميتها من الإعدادات."
+          }
+        },
         "en": {
           "stringUnit": {
             "state": "translated",
             "value": "This tag is already registered. You can rename it in Settings."
           }
         },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Esta etiqueta ya está registrada. Puedes cambiarle el nombre en Ajustes."
+          }
+        },
+        "hi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "यह टैग पहले से जोड़ा हुआ है। सेटिंग्स में नाम बदल सकते हैं।"
+          }
+        },
         "ja": {
           "stringUnit": {
             "state": "translated",
             "value": "このタグはすでに登録されています。設定から名前を変更できます。"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "此标签已经登记过了。可以在设置中重命名。"
           }
         }
       }

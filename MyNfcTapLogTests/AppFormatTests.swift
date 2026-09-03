@@ -90,7 +90,7 @@ struct DateFormatTests {
         let format = AppFormat(loc: loc)
         #expect(format.dateTime(sample) == "8月31日 7:41")
 
-        loc.language = .en
+        loc.selection = .en
         #expect(AppFormat(loc: loc).dateTime(sample) == "Aug 31, 7:41")
     }
 }

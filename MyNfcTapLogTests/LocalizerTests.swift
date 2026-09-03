@@ -11,7 +11,7 @@ struct LocalizerTests {
         #expect(loc.t("home.title") == "タップ記録")
         #expect(loc.t("scan.unknown.title") == "未登録のタグです")
 
-        loc.language = .en
+        loc.selection = .en
         #expect(loc.t("home.title") == "Tap Log")
         #expect(loc.t("scan.unknown.title") == "Unregistered tag")
     }
@@ -61,7 +61,8 @@ struct LocalizerTests {
             "home.emptyCta", "home.emptyHint", "settings.title", "settings.registeredTags",
             "settings.registeredNote", "settings.unnamedNote", "settings.addTag",
             "settings.scanToRegister", "settings.addNote", "settings.thresholdNote",
-            "settings.language", "settings.about", "settings.uidNote",
+            "settings.language", "settings.systemDefault", "settings.systemDefaultWith",
+            "settings.about", "settings.uidNote",
             "detail.elapsed", "detail.entries", "detail.history", "detail.newestFirst",
             "detail.noLogTitle", "detail.noLogBody", "detail.footer",
             "tag.rename", "tag.deleteTag", "tag.deleteNote", "tag.threshold",
@@ -101,6 +102,52 @@ struct NFCReaderFormatTests {
     func edgeCases() {
         #expect(NFCReader.hex(Data([0x04])) == "04")
         #expect(NFCReader.hex(Data()) == "")
+    }
+}
+
+@Suite("言語の選択と保存")
+struct LanguageSelectionTests {
+    /// テストごとに使い捨ての保存領域を作る。標準の UserDefaults を汚さず、並列実行でも干渉しない。
+    private func withTemporaryDefaults(_ body: (UserDefaults) -> Void) {
+        let name = "test.\(UUID().uuidString)"
+        let defaults = UserDefaults(suiteName: name)!
+        defer { defaults.removePersistentDomain(forName: name) }
+        body(defaults)
+    }
+
+    @Test("保存値が無ければ端末の言語設定に追従する")
+    func followsSystemByDefault() {
+        withTemporaryDefaults { defaults in
+            let loc = Localizer(defaults: defaults)
+            #expect(loc.selection == nil)
+            #expect(loc.language == AppLanguage.systemDefault)
+        }
+    }
+
+    @Test("明示的に選んだ言語は次の起動でも復元される")
+    func explicitSelectionPersists() {
+        withTemporaryDefaults { defaults in
+            Localizer(defaults: defaults).selection = .ar
+            #expect(Localizer(defaults: defaults).selection == .ar)
+        }
+    }
+
+    @Test("システムデフォルトに戻すと、次の起動でも追従したまま")
+    func backToSystemPersists() {
+        withTemporaryDefaults { defaults in
+            let loc = Localizer(defaults: defaults)
+            loc.selection = .hi
+            loc.selection = nil
+
+            let restored = Localizer(defaults: defaults)
+            #expect(restored.selection == nil)
+            #expect(restored.language == AppLanguage.systemDefault)
+        }
+    }
+
+    @Test("追従を表す保存値は言語コードと衝突しない")
+    func systemValueDoesNotCollide() {
+        #expect(AppLanguage(rawValue: "system") == nil)
     }
 }
 

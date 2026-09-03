@@ -239,13 +239,30 @@ struct SettingsView: View {
 
     // MARK: - 言語
 
+    /// 追従中は解決後の言語も添える。どの言語で動いているかが行だけで分かるようにするため。
+    private var languageValue: String {
+        loc.selection == nil
+            ? loc.t("settings.systemDefaultWith", loc.language.displayName)
+            : loc.language.displayName
+    }
+
     private var languageSection: some View {
         Menu {
+            Button {
+                loc.selection = nil
+            } label: {
+                if loc.selection == nil {
+                    Label(loc.t("settings.systemDefault"), systemImage: "checkmark")
+                } else {
+                    Text(loc.t("settings.systemDefault"))
+                }
+            }
+            Divider()
             ForEach(AppLanguage.allCases) { language in
                 Button {
-                    loc.language = language
+                    loc.selection = language
                 } label: {
-                    if loc.language == language {
+                    if loc.selection == language {
                         Label(language.displayName, systemImage: "checkmark")
                     } else {
                         Text(language.displayName)
@@ -258,9 +275,10 @@ struct SettingsView: View {
                     .font(.system(size: 16))
                     .foregroundStyle(Theme.textBody)
                 Spacer()
-                Text(loc.language.displayName)
+                Text(languageValue)
                     .font(.system(size: 15))
                     .foregroundStyle(Theme.textCaption)
+                    .lineLimit(1)
                 Image(systemName: "chevron.up.chevron.down")
                     .font(.system(size: 11))
                     .foregroundStyle(Theme.uid)

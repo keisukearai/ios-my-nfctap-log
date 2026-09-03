@@ -14,7 +14,7 @@ NFC タグにかざして行動を記録する iPhone アプリ。
 ## ビルド・実行
 
 ```bash
-# テスト（57件）
+# テスト（61件）
 xcodebuild test -project MyNfcTapLog.xcodeproj -scheme MyNfcTapLog \
   -destination 'platform=iOS Simulator,name=iPhone 17 Pro'
 
@@ -59,6 +59,10 @@ xcrun simctl launch booted com.keisukearai.MyNfcTapLog -seedSampleData -appLangu
 - アラビア語のロケールは `ar_SA@calendar=gregorian;numbers=latn`。素の `ar_SA` はヒジュラ暦・アラビア数字（٥٤٣）になり、等幅数字前提の表示と噛み合わないため明示的に固定している
 - 日付パターンは `AppLanguage.usesCJKDateFormat`（ja / zh-Hans）で `M月d日` 形式に分岐する
 - アプリ内での即時切り替えのため、`Localizer` が選択言語の `.lproj` Bundle を直接引いている（`Text(LocalizedStringKey)` は端末設定を見るため使えない）
+- **`Localizer.selection`（`AppLanguage?`）が選択、`Localizer.language` が解決結果**。`selection == nil` は端末の言語設定に追従する状態で、`language` は読み取り専用（`selection` に代入する）
+- 保存キーは `appLanguage`。追従状態は `"system"` として保存する（`AppLanguage.rawValue` のどれとも衝突しない）。未保存も追従扱い
+- `Localizer(defaults:)` で `UserDefaults` を差し替えられる。保存の往復を標準の保存領域を汚さずにテストするため
+- 複数形は非対応。`Localizer` が `String(format:)` を使う構造上、String Catalog の複数形バリエーションが展開されない（`1 etiquetas` / `3 ساعة` のようになる。en の `1 tags` も同じ）
 - 文言は `loc.t("key")` で取得する。`Text("...")` に日本語を直書きしない
 
 ## 見た目

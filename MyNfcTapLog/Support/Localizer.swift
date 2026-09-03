@@ -71,14 +71,24 @@ enum AppLanguage: String, CaseIterable, Identifiable {
 @Observable
 final class Localizer {
     private static let storageKey = "appLanguage"
+    /// 端末の言語設定に追従することを表す保存値。`AppLanguage.rawValue` のどれとも衝突しない。
+    private static let systemValue = "system"
 
-    var language: AppLanguage {
-        didSet { UserDefaults.standard.set(language.rawValue, forKey: Self.storageKey) }
+    @ObservationIgnored private let defaults: UserDefaults
+
+    /// 設定画面で選んだ言語。nil は端末の言語設定に追従している状態。
+    var selection: AppLanguage? {
+        didSet { defaults.set(selection?.rawValue ?? Self.systemValue, forKey: Self.storageKey) }
     }
 
-    init() {
-        let saved = UserDefaults.standard.string(forKey: Self.storageKey)
-        language = saved.flatMap(AppLanguage.init(rawValue:)) ?? .systemDefault
+    /// 実際に文言と日付の解決に使う言語。
+    var language: AppLanguage { selection ?? .systemDefault }
+
+    /// `defaults` を差し替えられるのはテストのため。保存の往復を標準の UserDefaults を汚さずに確かめる。
+    init(defaults: UserDefaults = .standard) {
+        self.defaults = defaults
+        // 未保存も "system" も追従として扱う。init 中の代入では didSet が走らないので保存もされない。
+        selection = defaults.string(forKey: Self.storageKey).flatMap(AppLanguage.init(rawValue:))
     }
 
     private var bundle: Bundle {

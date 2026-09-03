@@ -15,7 +15,7 @@ enum TestSupport {
 
     static func localizer(_ language: AppLanguage) -> Localizer {
         let loc = Localizer()
-        loc.language = language
+        loc.selection = language
         return loc
     }
 

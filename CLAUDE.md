@@ -9,9 +9,15 @@ NFC タグにかざして行動を記録する iPhone アプリ。
 - Bundle ID: `com.keisukearai.MyNfcTapLog` / Team: `HFZSU3MJLR`
 - Xcode 26 の **file system synchronized group** 構成。`MyNfcTapLog/` 配下にファイルを置けば自動でターゲットに入る（pbxproj の編集は不要）
 
+リポジトリ: `git@github.com:keisukearai/ios-my-nfctap-log.git`
+
 ## ビルド・実行
 
 ```bash
+# テスト（53件）
+xcodebuild test -project MyNfcTapLog.xcodeproj -scheme MyNfcTapLog \
+  -destination 'platform=iOS Simulator,name=iPhone 17 Pro'
+
 # ビルド
 xcodebuild -project MyNfcTapLog.xcodeproj -scheme MyNfcTapLog \
   -destination 'platform=iOS Simulator,name=iPhone 17 Pro' \
@@ -71,6 +77,17 @@ Claude Design のキャンバスが唯一の UI 仕様。読むには `/design-l
 - [ ] 読み取り失敗時に、システムの NFC シートと自前の結果シートが二重表示にならないか
 - [ ] タグ詳細・設定への遷移時、戻るボタンが「‹ タップ記録」と表示されるか（ホームはナビゲーションバーを隠しているため）
 - [ ] 実機 arai13 の iOS バージョン
+
+## テスト
+
+- Swift Testing（`import Testing`）。ターゲット `MyNfcTapLogTests`（テストホスト = アプリ本体）
+- SwiftData は `isStoredInMemoryOnly: true` のコンテナをテストごとに作り直す（`TestSupport.makeContext()`）
+- **NFC 読み取りそのものはテストできない**。`ScanCoordinator.applyLog(uid:)` / `applyRegister(uid:)` に
+  UID を受け取った後の分岐を切り出してあるので、そこをテストする
+- ビューのロジックは `Pagination` / `TagOrdering`（`Support/Ordering.swift`）に出してある。
+  ページングや並び順を変えるときはビューではなくこちらを直す
+- `LocalizerTests.noMissingTranslations` が画面で使うキーの訳漏れを検出する。
+  **文言キーを増やしたらこの配列にも足すこと**
 
 ## 注意
 

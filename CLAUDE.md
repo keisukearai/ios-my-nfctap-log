@@ -62,6 +62,18 @@ xcrun simctl launch booted com.keisukearai.MyNfcTapLog -seedSampleData -appLangu
 - **デザインに暗色パレットが無いためライト固定**（`RootView` の `.preferredColorScheme(.light)`）
 - 日本語混じりの数値は `Theme.monoDigit`（数字だけ等幅）、ASCII のみの UID・時刻は `Theme.mono`
 
+## アプリアイコン
+
+- `Tools/GenerateAppIcon.swift` で CoreGraphics から生成する。色や形を変えるときはこれを直す
+
+```bash
+swift Tools/GenerateAppIcon.swift MyNfcTapLog/Assets.xcassets/AppIcon.appiconset
+```
+
+- ライト / ダーク / ティントの3種を出力（Xcode 26 の AppIcon は3スロット構成）
+- ティントは iOS が輝度に色を乗せるため、黒地に白のグレースケールで作っている
+- 図案はアプリ内の `TagGlyph` と同じ「45度傾けたタグ＋吊り穴」に NFC の電波を足したもの
+
 ## デザイン
 
 Claude Design のキャンバスが唯一の UI 仕様。読むには `/design-login` が必要。

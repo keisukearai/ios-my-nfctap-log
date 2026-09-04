@@ -2,7 +2,7 @@ import Foundation
 
 /// デザインの表記に合わせた整形。
 /// - 経過: `3日 2時間` / `11時間` / `3d 2h`（日と時間の2段階まで。分未満は「たった今」）
-/// - 日時: `8月31日 7:41` / `Aug 31, 7:41`（今日・昨日という相対表記は使わない）
+/// - 日時: `2026/08/31 7:41` / `08/31/2026 7:41`（今日・昨日という相対表記は使わない）
 struct AppFormat {
     let loc: Localizer
 
@@ -18,13 +18,9 @@ struct AppFormat {
         return df
     }
 
-    private var dateTimePattern: String {
-        loc.language.usesCJKDateFormat ? "M月d日 H:mm" : "MMM d, H:mm"
-    }
+    private var dateTimePattern: String { "\(datePattern) H:mm" }
 
-    private var datePattern: String {
-        loc.language.usesCJKDateFormat ? "M月d日" : "MMM d"
-    }
+    private var datePattern: String { loc.language.datePattern }
 
     func dateTime(_ date: Date) -> String { formatter(dateTimePattern).string(from: date) }
     func date(_ date: Date) -> String { formatter(datePattern).string(from: date) }

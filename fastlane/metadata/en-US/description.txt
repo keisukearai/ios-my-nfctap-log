@@ -1,0 +1,30 @@
+MyNfcTapLog turns any NFC tag into a one-tap logger for the things you do every day.
+
+Stick a tag where the action happens — the medicine cabinet, the plant shelf, the bathroom scale — then hold your iPhone near it. That's the whole interaction. No app to open, no form to fill in.
+
+[Features]
+
+■ Tap to Log
+Hold your iPhone near a registered tag and the moment is recorded. The home screen shows how long it has been since each tag was last tapped.
+
+■ Overdue Warnings
+Give any tag a threshold — 12 hours, 1 day, 3 days, or 1 week. Once that much time passes, the elapsed time turns red so you can see at a glance what is overdue.
+
+■ Sorted by What Needs You
+Tags are ordered by the oldest tap first, so whatever you have neglected the longest sits at the top.
+
+■ Full History
+Every tag keeps a dated log of every tap. Browse it page by page and swipe to delete any entry.
+
+■ Six Languages
+English, Japanese, Simplified Chinese, Spanish, Hindi, and Arabic — switchable inside the app, with full right-to-left support.
+
+[Who it's for]
+• Anyone tracking a habit that happens in a specific place
+• People who want a log without the friction of opening an app
+• Those who prefer a simple tool with no accounts and no clutter
+
+[Notes]
+Works with NTAG213 and other ISO14443 Type A tags. Reading requires an iPhone with NFC. Metal surfaces need anti-metal tags. Cards that randomize their UID cannot be used.
+
+No ads. No in-app purchases. No account. Nothing leaves your device.

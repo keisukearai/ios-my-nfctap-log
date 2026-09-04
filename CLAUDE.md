@@ -11,10 +11,41 @@ NFC タグにかざして行動を記録する iPhone アプリ。
 
 リポジトリ: `git@github.com:keisukearai/ios-my-nfctap-log.git`
 
+## App Store Connect
+
+新規 App 作成時の入力値。SKU は他プロジェクト（MyGeoWarp = `mygeowarp` / MyCropResize = `mycropresize`）と同じく、Bundle ID 末尾のアプリ名を全部小文字にして区切り文字なしで繋げる形式。
+
+| 項目 | 値 |
+|---|---|
+| プラットフォーム | iOS |
+| 名前 | MyNfcTapLog |
+| プライマリ言語 | English |
+| バンドル ID | `com.keisukearai.MyNfcTapLog` |
+| SKU | `mynfctaplog` |
+
+- **IAP の Product ID には英数字・ピリオド・アンダースコアしか使えない（ハイフン不可）**。過去に `com.keisukearai.my-fami-list.premium` が弾かれた実績あり。このアプリは課金なしなので現状は該当しない
+- 2026-09-05 に App Store Connect へアプリ登録済み。メタデータ（テキスト）は fastlane で投入済み
+
+### メタデータの投入（fastlane）
+
+```bash
+export PATH="/opt/homebrew/opt/ruby/bin:$PATH"
+bundle exec fastlane upload_metadata --env local
+```
+
+- **`--env local` が必須**。これが無いと `fastlane/.env.local` が読まれず `No value found for 'key_id'` で落ちる
+- `upload_metadata` レーンはテキストのみ。`skip_binary_upload` / `skip_screenshots` でバイナリとスクリーンショットには触らない
+- 文言は `fastlane/metadata/{en-US,ja}/*.txt`。カテゴリは `fastlane/metadata/primary_category.txt`（`PRODUCTIVITY`）
+- `fastlane/.env.local`（ASC API キー・審査連絡先）は **git 管理外**。MyCropResize から流用した。ASC の .p8 は `/Users/keisukearai/Downloads/AuthKey_6W3CF67B68.p8`
+- 初回バージョンでは `release_notes` はスキップされる（「このバージョンの新機能」欄が存在しないため）。仕様どおり
+- **審査連絡先の書き込みは `Error fetching app store review detail - No data` で失敗する**。App Store Connect 側に審査情報のレコードが未生成のため。バイナリを1本上げてから再実行するか、画面から手入力する（未検証）
+- **サポートURL・プライバシーURLは空のまま**。審査提出前に埋める必要がある（他プロジェクトは `https://kotoragk.com/<sku>` 形式）
+- Fastfile のレーンは `upload_metadata` のみ。ビルド・TestFlight・審査提出のレーンは未移植（MyGeoWarp の Fastfile に一式あるので必要になったら移植する）
+
 ## ビルド・実行
 
 ```bash
-# テスト（61件）
+# テスト（65件）
 xcodebuild test -project MyNfcTapLog.xcodeproj -scheme MyNfcTapLog \
   -destination 'platform=iOS Simulator,name=iPhone 17 Pro'
 
@@ -44,7 +75,9 @@ xcrun simctl launch booted com.keisukearai.MyNfcTapLog -seedSampleData -appLangu
 ## 設計判断
 
 - **登録と記録を分離**。ホームのスキャンで未登録タグを読んだ場合は結果シートで明示的に「このタグを登録」を押させる
-- **登録時に名前は付けない**。無名（`label = ""`）で登録し、設定画面で後から変更する。無名タグは「新規タグ」と表示
+- **登録時に名前を入力する（任意）**。読み取り成功の直後に名前入力アラート（`RootView` の `register.*`）を出す。空のまま登録すれば無名（`label = ""`）で、無名タグは「新規タグ」と表示。名前は設定画面で後から変更できる
+- 名前入力アラートは設定の「タグをスキャンして登録」と、ホームのスキャン結果シートの「このタグを登録」の**両方**が通る。`ScanCoordinator.pendingRegistration` に UID を置き、アラートは `RootView` に1つだけ持つ
+- SwiftUI の `.alert` はメッセージを入力欄の上に1つしか置けないため、本文・UID・注記の3行をまとめてメッセージにしている（デザインは注記が入力欄の下。合わせるなら自作シートが必要）
 - **記録の削除のみ実装、手動追加はしない**。手動追加を入れると NFC が主役でなくなるため
 - ホームの並び順は「最後のタップが古い順」、未記録は最上位。派生値のため `@Query` ではなく Swift 側でソート
 - 経過の警告はタグごとの閾値（`thresholdHours`、0 = なし。選択肢は 12時間/1日/3日/1週間）
@@ -57,7 +90,8 @@ xcrun simctl launch booted com.keisukearai.MyNfcTapLog -seedSampleData -appLangu
 - `AppLanguage.rawValue` が `.lproj` のディレクトリ名になる（簡体中文は `zh-Hans`）。`LocalizerTests.rawValuesMatchLprojNames` が実際に `.lproj` の存在を確かめている
 - アラビア語は RTL。`layoutDirection` は端末の言語設定を見るため、`RootView` で `AppLanguage.isRightToLeft` を `.environment(\.layoutDirection, ...)` に流し込んで切り替えている
 - アラビア語のロケールは `ar_SA@calendar=gregorian;numbers=latn`。素の `ar_SA` はヒジュラ暦・アラビア数字（٥٤٣）になり、等幅数字前提の表示と噛み合わないため明示的に固定している
-- 日付パターンは `AppLanguage.usesCJKDateFormat`（ja / zh-Hans）で `M月d日` 形式に分岐する
+- 日付パターンは `AppLanguage.datePattern`。区切りとゼロ埋めは全言語共通で、年月日の順だけ慣習に合わせる（ja / zh-Hans = `yyyy/MM/dd`、en = `MM/dd/yyyy`、es / hi / ar = `dd/MM/yyyy`）。`AppFormat` の日時は `datePattern + " H:mm"`
+- 訳文に `\n` を入れると `Text` がそのまま改行する（`home.emptyBody` は1文目の後で改行する指定）
 - アプリ内での即時切り替えのため、`Localizer` が選択言語の `.lproj` Bundle を直接引いている（`Text(LocalizedStringKey)` は端末設定を見るため使えない）
 - **`Localizer.selection`（`AppLanguage?`）が選択、`Localizer.language` が解決結果**。`selection == nil` は端末の言語設定に追従する状態で、`language` は読み取り専用（`selection` に代入する）
 - 保存キーは `appLanguage`。追従状態は `"system"` として保存する（`AppLanguage.rawValue` のどれとも衝突しない）。未保存も追従扱い
@@ -103,8 +137,8 @@ Claude Design のキャンバスが唯一の UI 仕様。読むには `/design-l
 
 - Swift Testing（`import Testing`）。ターゲット `MyNfcTapLogTests`（テストホスト = アプリ本体）
 - SwiftData は `isStoredInMemoryOnly: true` のコンテナをテストごとに作り直す（`TestSupport.makeContext()`）
-- **NFC 読み取りそのものはテストできない**。`ScanCoordinator.applyLog(uid:)` / `applyRegister(uid:)` に
-  UID を受け取った後の分岐を切り出してあるので、そこをテストする
+- **NFC 読み取りそのものはテストできない**。`ScanCoordinator.applyLog(uid:)` / `applyRegister(uid:)` /
+  `commitRegistration(label:)` に UID を受け取った後の分岐を切り出してあるので、そこをテストする
 - ビューのロジックは `Pagination` / `TagOrdering`（`Support/Ordering.swift`）に出してある。
   ページングや並び順を変えるときはビューではなくこちらを直す
 - `LocalizerTests.noMissingTranslations` が画面で使うキーの訳漏れを検出する。

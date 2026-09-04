@@ -62,20 +62,28 @@ struct DateFormatTests {
     private let sample = TestSupport.date(2026, 8, 31, 7, 41)
     private let evening = TestSupport.date(2026, 9, 1, 21, 41)
 
-    @Test("日本語は「M月d日 H:mm」")
+    @Test("日本語は「yyyy/MM/dd H:mm」")
     func japanese() {
         let format = AppFormat(loc: TestSupport.localizer(.ja))
-        #expect(format.dateTime(sample) == "8月31日 7:41")
-        #expect(format.date(sample) == "8月31日")
+        #expect(format.dateTime(sample) == "2026/08/31 7:41")
+        #expect(format.date(sample) == "2026/08/31")
         #expect(format.time(sample) == "7:41")
     }
 
-    @Test("英語は「MMM d, H:mm」")
+    @Test("英語は「MM/dd/yyyy H:mm」")
     func english() {
         let format = AppFormat(loc: TestSupport.localizer(.en))
-        #expect(format.dateTime(sample) == "Aug 31, 7:41")
-        #expect(format.date(sample) == "Aug 31")
+        #expect(format.dateTime(sample) == "08/31/2026 7:41")
+        #expect(format.date(sample) == "08/31/2026")
         #expect(format.time(sample) == "7:41")
+    }
+
+    @Test("日本語・英語以外は「dd/MM/yyyy」")
+    func others() {
+        #expect(AppFormat(loc: TestSupport.localizer(.zhHans)).date(sample) == "2026/08/31")
+        #expect(AppFormat(loc: TestSupport.localizer(.es)).date(sample) == "31/08/2026")
+        #expect(AppFormat(loc: TestSupport.localizer(.hi)).date(sample) == "31/08/2026")
+        #expect(AppFormat(loc: TestSupport.localizer(.ar)).date(sample) == "31/08/2026")
     }
 
     @Test("午後も24時間表記のまま（端末の12時間設定に引きずられない）")
@@ -88,9 +96,9 @@ struct DateFormatTests {
     func switchingLanguageChangesOutput() {
         let loc = TestSupport.localizer(.ja)
         let format = AppFormat(loc: loc)
-        #expect(format.dateTime(sample) == "8月31日 7:41")
+        #expect(format.dateTime(sample) == "2026/08/31 7:41")
 
         loc.selection = .en
-        #expect(AppFormat(loc: loc).dateTime(sample) == "Aug 31, 7:41")
+        #expect(AppFormat(loc: loc).dateTime(sample) == "08/31/2026 7:41")
     }
 }

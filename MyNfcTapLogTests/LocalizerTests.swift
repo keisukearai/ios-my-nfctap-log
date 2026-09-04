@@ -68,6 +68,7 @@ struct LocalizerTests {
             "tag.rename", "tag.deleteTag", "tag.deleteNote", "tag.threshold",
             "tag.unnamed", "tag.noTaps", "tag.registeredOnly",
             "rename.title", "rename.body", "rename.placeholder",
+            "register.title", "register.body", "register.note", "common.register",
             "scan.ok.title", "scan.unknown.title", "scan.unknown.body", "scan.unknown.cta",
             "scan.fail.title", "scan.fail.body", "scan.fail.cta", "scan.close",
             "scan.registered.title", "scan.registered.body",
@@ -180,9 +181,10 @@ struct AppLanguageTests {
         #expect(AppLanguage.allCases.filter(\.isRightToLeft) == [.ar])
     }
 
-    @Test("「M月d日」形式を使うのは日本語と簡体中文")
-    func cjkDateFormatLanguages() {
-        #expect(AppLanguage.allCases.filter(\.usesCJKDateFormat) == [.ja, .zhHans])
+    @Test("日付の並び順は言語ごとの慣習に合わせる")
+    func datePatterns() {
+        #expect(AppLanguage.allCases.map(\.datePattern)
+            == ["yyyy/MM/dd", "MM/dd/yyyy", "yyyy/MM/dd", "dd/MM/yyyy", "dd/MM/yyyy", "dd/MM/yyyy"])
     }
 
     @Test("表示名はメニューの見た目どおり")

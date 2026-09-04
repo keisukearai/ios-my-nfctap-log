@@ -39,8 +39,15 @@ enum AppLanguage: String, CaseIterable, Identifiable {
     /// アプリ内での切り替えを反映させるにはこの値を環境に流し込む必要がある。
     var isRightToLeft: Bool { self == .ar }
 
-    /// 日付を「M月d日」形式で組む言語か。
-    var usesCJKDateFormat: Bool { self == .ja || self == .zhHans }
+    /// 日付の並び順。年・月・日の順序だけを言語の慣習に合わせ、区切りとゼロ埋めは全言語で揃える
+    /// （デザインの `2026/09/03` / `09/03/2026` の表記に合わせたもの）。
+    var datePattern: String {
+        switch self {
+        case .ja, .zhHans: "yyyy/MM/dd"
+        case .en: "MM/dd/yyyy"
+        case .es, .hi, .ar: "dd/MM/yyyy"
+        }
+    }
 
     /// `Locale.preferredLanguages` の先頭と突き合わせるための言語コード。
     private var languageCode: String {

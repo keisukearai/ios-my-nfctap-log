@@ -62,22 +62,61 @@ struct ScanCoordinatorTests {
         #expect(try context.fetchCount(FetchDescriptor<LogEntry>()) == 0)
     }
 
-    @Test("登録は名前を付けずに行う")
-    func registerCreatesUnnamedTag() throws {
+    @Test("読み取っただけでは登録せず、名前入力に回す")
+    func registerWaitsForName() throws {
         let context = try TestSupport.makeContext()
         let coordinator = ScanCoordinator()
 
         let outcome = coordinator.applyRegister(uid: "04:9F", context: context)
 
+        #expect(outcome == nil)
+        #expect(coordinator.pendingRegistration == "04:9F")
+        #expect(try context.fetchCount(FetchDescriptor<TagItem>()) == 0)
+    }
+
+    @Test("名前を入れて登録するとその名前で保存される")
+    func commitWithName() throws {
+        let context = try TestSupport.makeContext()
+        let coordinator = ScanCoordinator()
+        _ = coordinator.applyRegister(uid: "04:9F", context: context)
+
+        let outcome = coordinator.commitRegistration(label: "  薬を飲む  ", context: context)
+
         guard case .registered = outcome else {
-            Issue.record("登録されるはずが \(outcome) だった")
+            Issue.record("登録されるはずが \(String(describing: outcome)) だった")
             return
         }
         let tags = try context.fetch(FetchDescriptor<TagItem>())
         #expect(tags.count == 1)
         #expect(tags[0].uid == "04:9F")
-        #expect(tags[0].isUnnamed)
+        #expect(tags[0].label == "薬を飲む")
         #expect(tags[0].thresholdHours == 0)
+        #expect(coordinator.pendingRegistration == nil)
+    }
+
+    @Test("名前を空のまま登録すると無名タグになる")
+    func commitWithoutName() throws {
+        let context = try TestSupport.makeContext()
+        let coordinator = ScanCoordinator()
+        _ = coordinator.applyRegister(uid: "04:9F", context: context)
+
+        _ = coordinator.commitRegistration(label: "   ", context: context)
+
+        let tags = try context.fetch(FetchDescriptor<TagItem>())
+        #expect(tags.count == 1)
+        #expect(tags[0].isUnnamed)
+    }
+
+    @Test("名前入力をキャンセルすると何も登録されない")
+    func cancelingRegistrationRegistersNothing() throws {
+        let context = try TestSupport.makeContext()
+        let coordinator = ScanCoordinator()
+        _ = coordinator.applyRegister(uid: "04:9F", context: context)
+
+        coordinator.pendingRegistration = nil
+
+        #expect(coordinator.commitRegistration(label: "薬を飲む", context: context) == nil)
+        #expect(try context.fetchCount(FetchDescriptor<TagItem>()) == 0)
     }
 
     @Test("同じタグを二重登録しない")
@@ -88,10 +127,11 @@ struct ScanCoordinatorTests {
 
         let outcome = coordinator.applyRegister(uid: "04:9F", context: context)
 
-        guard case .alreadyRegistered = outcome else {
-            Issue.record("登録済みとして扱われるはずが \(outcome) だった")
+        guard case .alreadyRegistered? = outcome else {
+            Issue.record("登録済みとして扱われるはずが \(String(describing: outcome)) だった")
             return
         }
+        #expect(coordinator.pendingRegistration == nil)
         #expect(try context.fetchCount(FetchDescriptor<TagItem>()) == 1)
     }
 
@@ -106,8 +146,9 @@ struct ScanCoordinatorTests {
             Issue.record("最初は未登録のはず")
             return
         }
-        // シートの「このタグを登録」を押した相当
-        coordinator.register(uid: "04:9F", context: context)
+        // シートの「このタグを登録」→ 名前入力アラートで「登録」を押した相当
+        _ = coordinator.applyRegister(uid: "04:9F", context: context)
+        _ = coordinator.commitRegistration(label: "", context: context)
 
         // 2回目：記録できる
         guard case .logged(_, _, let count) = coordinator.applyLog(uid: "04:9F", context: context, loc: loc) else {

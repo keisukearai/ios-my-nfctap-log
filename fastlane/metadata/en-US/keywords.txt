@@ -1,0 +1,1 @@
+NFC,tag,habit,log,tracker,routine,reminder,record,tap,NTAG

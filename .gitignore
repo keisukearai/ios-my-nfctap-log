@@ -6,3 +6,12 @@ xcuserdata/
 *.xcworkspace/xcuserdata/
 .swiftpm/
 icon-drafts/
+
+# Fastlane
+fastlane/report.xml
+fastlane/Preview.html
+fastlane/test_output
+fastlane/.env.local
+.bundle/
+vendor/bundle/
+Gemfile.lock

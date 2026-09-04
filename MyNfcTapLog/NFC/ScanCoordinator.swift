@@ -27,6 +27,8 @@ final class ScanCoordinator {
     }
 
     var outcome: Outcome?
+    /// 名前入力アラートの対象 UID。読み取りと登録の確定を分けるために持つ。
+    var pendingRegistration: String?
     private(set) var isScanning = false
     private let reader = NFCReader()
 
@@ -36,7 +38,7 @@ final class ScanCoordinator {
         outcome = applyLog(uid: uid, context: context, loc: loc)
     }
 
-    /// 設定の「タグをスキャンして登録」。名前は付けずに登録し、あとから設定で変更する。
+    /// 設定の「タグをスキャンして登録」。読み取れたら名前入力アラートに進む。
     func scanToRegister(context: ModelContext, loc: Localizer) async {
         guard let uid = await read(loc: loc) else { return }
         outcome = applyRegister(uid: uid, context: context)
@@ -55,16 +57,25 @@ final class ScanCoordinator {
         return .logged(label: name, at: entry.timestamp, count: tag.entries.count)
     }
 
-    func applyRegister(uid: String, context: ModelContext) -> Outcome {
+    /// 登録の入口。既登録ならその場で知らせ、未登録なら名前入力アラートに回す（結果シートは出さない）。
+    func applyRegister(uid: String, context: ModelContext) -> Outcome? {
         guard Self.find(uid: uid, in: context) == nil else {
             return .alreadyRegistered
         }
-        register(uid: uid, context: context)
+        pendingRegistration = uid
+        return nil
+    }
+
+    /// 名前入力アラートの「登録」。名前は任意で、空なら無名タグとして登録する。
+    func commitRegistration(label: String, context: ModelContext) -> Outcome? {
+        guard let uid = pendingRegistration else { return nil }
+        pendingRegistration = nil
+        register(uid: uid, label: label, context: context)
         return .registered
     }
 
-    func register(uid: String, context: ModelContext) {
-        context.insert(TagItem(uid: uid))
+    func register(uid: String, label: String = "", context: ModelContext) {
+        context.insert(TagItem(uid: uid, label: label.trimmingCharacters(in: .whitespacesAndNewlines)))
         try? context.save()
     }
 

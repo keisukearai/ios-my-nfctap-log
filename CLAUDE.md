@@ -67,7 +67,9 @@ xcrun simctl launch booted com.keisukearai.MyNfcTapLog -seedSampleData -appLangu
 bash Tools/CaptureScreenshots.sh
 ```
 
-- iPhone 17 Pro Max（6.9インチ / 1320x2868）で ja・en-US を各5枚撮り、`fastlane/screenshots/{ja,en-US}/*.jpg` に出す。**6.9インチ1セットで全 iPhone サイズをカバーできる**
+- **App Store Connect が受け付けるのは 1242x2688 / 1284x2778（6.5インチ枠）**。1320x2868（6.9インチ）は弾かれた
+- ネイティブで 1284x2778 になる iPhone 14 Plus で撮る。`Shot-6.5` という名前のシミュレータをスクリプトが無ければ作る（`DEVICE=...` で機種を変えられる）
+- ja・en-US を各5枚、`screenshots/{ja,en-US}/*.jpg` に出す（実行するたび上書き）
 - 撮る画面：`1_home`（タグ一覧）/ `2_scan`（記録しましたのシート）/ `3_detail`（履歴）/ `4_settings`（設定）/ `5_empty`（空のホーム）
 - ホーム以外は起動引数 `-screen detail|settings|scan` で表示する（`MyNfcTapLog/Support/ScreenshotMode.swift`。**DEBUG のみ**）。HomeView のリンクは値なしの `NavigationLink` なので、`RootView` の `navigationDestination(isPresented:)` で push している
 - サンプルデータのタグ名は表示言語に合わせて日本語／英語を切り替える（`SampleData.usesEnglish`）

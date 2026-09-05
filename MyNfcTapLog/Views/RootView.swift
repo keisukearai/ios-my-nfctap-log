@@ -7,10 +7,18 @@ struct RootView: View {
     @State private var loc = Localizer()
     @State private var scan = ScanCoordinator()
     @State private var registerText = ""
+#if DEBUG
+    @State private var screenshotPush = false
+    @State private var screenshotTag: TagItem?
+#endif
 
     var body: some View {
         NavigationStack {
             HomeView()
+#if DEBUG
+                // スクリーンショット撮影用。起動引数が無ければ何も起きない。
+                .navigationDestination(isPresented: $screenshotPush) { screenshotDestination }
+#endif
         }
         .tint(Theme.accent)
         .environment(loc)
@@ -52,9 +60,40 @@ struct RootView: View {
         .task {
 #if DEBUG
             if SampleData.isRequested { SampleData.seed(into: context) }
+            applyScreenshotScreen()
 #endif
         }
     }
+
+#if DEBUG
+    @ViewBuilder private var screenshotDestination: some View {
+        switch ScreenshotMode.screen {
+        case .detail:
+            if let tag = screenshotTag { TagDetailView(tag: tag) }
+        case .settings:
+            SettingsView()
+        default:
+            EmptyView()
+        }
+    }
+
+    private func applyScreenshotScreen() {
+        switch ScreenshotMode.screen {
+        case .detail:
+            screenshotTag = ScreenshotMode.featuredTag(in: context)
+            screenshotPush = screenshotTag != nil
+        case .settings:
+            screenshotPush = true
+        case .scan:
+            if let tag = ScreenshotMode.featuredTag(in: context) {
+                let name = tag.isUnnamed ? loc.t("tag.unnamed") : tag.label
+                scan.outcome = .logged(label: name, at: .now, count: tag.entries.count)
+            }
+        case nil:
+            break
+        }
+    }
+#endif
 
     private var registerBinding: Binding<Bool> {
         Binding(

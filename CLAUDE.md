@@ -61,6 +61,21 @@ xcrun simctl launch booted com.keisukearai.MyNfcTapLog -seedSampleData
 xcrun simctl launch booted com.keisukearai.MyNfcTapLog -seedSampleData -appLanguage en
 ```
 
+## App Store 用スクリーンショット
+
+```bash
+bash Tools/CaptureScreenshots.sh
+```
+
+- iPhone 17 Pro Max（6.9インチ / 1320x2868）で ja・en-US を各5枚撮り、`fastlane/screenshots/{ja,en-US}/*.jpg` に出す。**6.9インチ1セットで全 iPhone サイズをカバーできる**
+- 撮る画面：`1_home`（タグ一覧）/ `2_scan`（記録しましたのシート）/ `3_detail`（履歴）/ `4_settings`（設定）/ `5_empty`（空のホーム）
+- ホーム以外は起動引数 `-screen detail|settings|scan` で表示する（`MyNfcTapLog/Support/ScreenshotMode.swift`。**DEBUG のみ**）。HomeView のリンクは値なしの `NavigationLink` なので、`RootView` の `navigationDestination(isPresented:)` で push している
+- サンプルデータのタグ名は表示言語に合わせて日本語／英語を切り替える（`SampleData.usesEnglish`）
+- ステータスバーは `simctl status_bar override` で 9:41・電波満タンに固定
+- App Store はアルファ付き PNG を弾くため JPEG に変換して出力している
+- アップロードは App Store Connect の画面から手動（`upload_screenshots` レーンは未移植）
+- **Fastfile の `upload_metadata` は `skip_screenshots: true`。メタデータ投入でスクショが消えることはない**
+
 ## NFC
 
 - `NFCTagReaderSession`（`pollingOption: .iso14443`）で **UID のみ** 読む。タグへの書き込みはしない

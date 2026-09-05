@@ -10,17 +10,29 @@ enum SampleData {
         ProcessInfo.processInfo.arguments.contains("-seedSampleData")
     }
 
+    /// 表示言語。`-appLanguage` の指定が無ければ端末の設定を見る。
+    private static var usesEnglish: Bool {
+        let selected = UserDefaults.standard.string(forKey: "appLanguage")
+        let code = (selected == "system" ? nil : selected) ?? Locale.preferredLanguages.first ?? "ja"
+        return code.hasPrefix("en")
+    }
+
     static func seed(into context: ModelContext) {
         guard let existing = try? context.fetchCount(FetchDescriptor<TagItem>()), existing == 0 else { return }
 
         let now = Date.now
+        // スクリーンショットを英語で撮るときに日本語のタグ名が残らないよう、表示言語に合わせる。
+        let ja = ["", "体重を測る", "水をやる", "薬を飲む", "ゴミを出す"]
+        let en = ["", "Weigh in", "Water the plants", "Take medicine", "Take out the trash"]
+        let labels = usesEnglish ? en : ja
+
         // (uid, ラベル, 閾値, 最終記録からの経過時間, 記録件数, 記録の間隔)
         let specs: [(String, String, Int, Double, Int, Double)] = [
-            ("04:2D:B1:48:F0:A2:80", "", 0, 0, 0, 0),
-            ("04:8A:2F:1C:63:B7:80", "体重を測る", 72, 74, 42, 24),
-            ("04:1B:77:D0:2A:5C:81", "水をやる", 168, 36, 18, 72),
-            ("04:C4:09:65:81:3E:80", "薬を飲む", 24, 11, 120, 14),
-            ("04:5E:33:A7:14:96:81", "ゴミを出す", 0, 3, 31, 48),
+            ("04:2D:B1:48:F0:A2:80", labels[0], 0, 0, 0, 0),
+            ("04:8A:2F:1C:63:B7:80", labels[1], 72, 74, 42, 24),
+            ("04:1B:77:D0:2A:5C:81", labels[2], 168, 36, 18, 72),
+            ("04:C4:09:65:81:3E:80", labels[3], 24, 11, 120, 14),
+            ("04:5E:33:A7:14:96:81", labels[4], 0, 3, 31, 48),
         ]
 
         for (index, spec) in specs.enumerated() {

@@ -25,6 +25,14 @@ NFC タグにかざして行動を記録する iPhone アプリ。
 
 - **IAP の Product ID には英数字・ピリオド・アンダースコアしか使えない（ハイフン不可）**。過去に `com.keisukearai.my-fami-list.premium` が弾かれた実績あり。このアプリは課金なしなので現状は該当しない
 - 2026-09-05 に App Store Connect へアプリ登録済み。メタデータ（テキスト）は fastlane で投入済み
+- **2026-09-06 に審査提出済み**（スクショは 1284x2778 を10枚手動アップロード）
+- **2026-09-10 に Guideline 2.1 - Information Needed で差し戻し**（Submission ID: `92b00aee-a3c2-4e51-9f48-28070351b40a`）。NFC の動作を示すデモ動画を求められた。バイナリ差し替えは不要で、App Review Information の Notes に動画 URL を書いて Resolution Center に返信すればよい
+  - 文面の「designated hardware / pairing process」は MFi 外部アクセサリ向けの定型文。**汎用 NFC タグ（ISO 14443）を読むだけでペアリングも専用ハードも無いことを Notes に明示する**
+  - **審査デバイスが iPad Air 11-inch (M3)**。iPad は Core NFC のタグ読み取りに非対応なので審査担当は NFC を実行できない。この点も Notes に書く
+  - 動画は画面収録ではなく**外部カメラ撮影**（実機とタグの両方が映っていること）。置き場所は YouTube 限定公開（Google Drive はログイン要求で見られないことがある）
+  - デモ動画（限定公開・78秒・2026-09-11 撮影）: https://www.youtube.com/watch?v=7faOVXHdte4
+    - Shorts としてアップしたが、審査提出には `watch?v=` 形式を使う（デスクトップで通常プレーヤーで開くため）
+    - タイトル: `MyNfcTapLog 1.0 (1) — App Review Demo: NFC Tag Reading on iPhone`
 
 ### メタデータの投入（fastlane）
 
@@ -143,12 +151,16 @@ Claude Design のキャンバスが唯一の UI 仕様。読むには `/design-l
 - 要件定義書: `/Users/keisukearai/workspace/ios/MyNfcTapLog-req1.md`
   - **req1.md より後にデザインで決まったことが優先**（多言語対応・経過の警告・登録フロー・履歴のページングは req1.md と食い違う）
 
-## 未確認
+## 実機確認済み（2026-09-11 / arai13 = iPhone 13 / iOS 26.6.1）
 
-- [ ] 実機での NFC 読み取り（未実施。シミュレータでは検証不可）
-- [ ] 読み取り失敗時に、システムの NFC シートと自前の結果シートが二重表示にならないか
-- [ ] タグ詳細・設定への遷移時、戻るボタンが「‹ タップ記録」と表示されるか（ホームはナビゲーションバーを隠しているため）
-- [ ] 実機 arai13 の iOS バージョン
+- [x] 実機での NFC 読み取り（未登録タグの登録・登録済みタグの記録とも動作）
+- [x] 読み取り失敗時に、システムの NFC シートと自前の結果シートが二重表示にならない
+- [x] タグ詳細・設定への遷移時、戻るボタンが「‹ タップ記録」と表示される
+- [x] 実機 arai13 の iOS バージョン = 26.6.1
+
+実機へのデプロイは `/sim-device-deploy`。`xcrun xctrace list devices` では arai13 が
+Offline と出ることがあるが、`xcrun devicectl list devices` で `available (paired)` なら
+ビルド・インストールとも通る（Wi-Fi 接続）。
 
 ## テスト
 

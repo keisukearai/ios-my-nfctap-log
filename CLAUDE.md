@@ -33,6 +33,9 @@ NFC タグにかざして行動を記録する iPhone アプリ。
   - デモ動画（限定公開・78秒・2026-09-11 撮影）: https://www.youtube.com/watch?v=7faOVXHdte4
     - Shorts としてアップしたが、審査提出には `watch?v=` 形式を使う（デスクトップで通常プレーヤーで開くため）
     - タイトル: `MyNfcTapLog 1.0 (1) — App Review Demo: NFC Tag Reading on iPhone`
+- 2026-09-10 20:44 UTC に再提出 → **承認され、2026-09-13 に自動リリース**（`releaseType = AFTER_APPROVAL`）。Apple ID `6808812478`
+  - 2026-09-14 時点で ASC API は `READY_FOR_SALE`・175地域すべて `available = true` なのに、ASC 画面に「App Storeの配信から削除されました」と出て、公開ストア（`apps.apple.com/jp/app/id6808812478`）は 404 だった。初回リリース直後の反映待ちと推定（未検証）
+  - 配信状況は画面より API（`/v1/apps/{id}/appAvailabilityV2` → `/v2/appAvailabilities/{id}/territoryAvailabilities`）の方が正確に確認できる
 
 ### メタデータの投入（fastlane）
 
